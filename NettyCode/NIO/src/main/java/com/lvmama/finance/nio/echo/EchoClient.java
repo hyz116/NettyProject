@@ -112,6 +112,7 @@ public class EchoClient {
     // 从服务端接收数据，把数据放到receiveBuffer中
     // 如果receiveBuffer有一行数据，就打印这行数据，之后删除
     private void receiveDataFromServer(SelectionKey selectionKey) throws IOException {
+        log.info("接收服务器响应数据");
         SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
         socketChannel.read(receiveBuffer);
         receiveBuffer.flip();

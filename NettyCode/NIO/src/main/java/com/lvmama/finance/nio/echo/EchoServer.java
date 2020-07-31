@@ -113,12 +113,6 @@ public class EchoServer {
         buffer.position(tempBuffer.limit());
         // 删除已经处理的字符串
         buffer.compact();
-
-        if (outputData.equals("Bye\r\n")) { // 如果已经输出了“Byte\r\n”，就使SelectinKey实现，并关闭SocketChannel
-            selectionKey.cancel();
-            socketChannel.close();
-            log.info("关闭与客户的连接");
-        }
     }
 
     // 处理接收到的数据
