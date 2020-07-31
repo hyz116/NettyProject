@@ -20,7 +20,7 @@ public class EchoClient {
                 .handler(new EchoClientInitializer());
 
         try {
-            Channel channel = bootstrap.connect("localhost", 8885).sync().channel();
+            Channel channel = bootstrap.connect("localhost", 8855).sync().channel();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             for (;;) {

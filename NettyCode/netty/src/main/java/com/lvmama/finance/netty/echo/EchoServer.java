@@ -19,7 +19,7 @@ public class EchoServer {
                 .childHandler(new EchoServerInitializer());
 
         try {
-            ChannelFuture future = serverBootstrap.bind(8885).sync();
+            ChannelFuture future = serverBootstrap.bind(8855).sync();
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
             e.printStackTrace();
